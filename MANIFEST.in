@@ -1,0 +1,8 @@
+# MANIFEST.in needed to include non-Python files in the package to build wheel distributions
+# e.g. C++ source files, headers, README, pyproject.toml, etc.
+
+include pyproject.toml
+include README.md
+
+recursive-include src *.py *.cpp *.hpp *.h
+recursive-include include *.hpp *.h
