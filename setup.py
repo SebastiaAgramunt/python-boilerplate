@@ -21,7 +21,7 @@ EXTRA_COMPILE_ARGS = ['-O3', '-std=c++17']
 
 ext_modules = [
     Pybind11Extension(
-        'package_example._core',  # ⬅️ submodule inside the package
+        PACKAGE_NAME + '._core',  # ⬅️ submodule inside the package
         SRC_FILES,
         include_dirs=[PYTHON_LIB_INCLUDES, str(PACKAGE_LIB_INCLUDES)],
         extra_compile_args=EXTRA_COMPILE_ARGS,
