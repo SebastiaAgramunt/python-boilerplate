@@ -34,7 +34,7 @@ setup(
     version=__version__,
     author='Sebastia Agramunt Puig',
     author_email='contact@agramunt.me',
-    url='https://github.com/sebastiaagramunt/blogging-code/tree/main/python-cpp-boilerplate',
+    url='https://github.com/SebastiaAgramunt/python-boilerplate',
     description='Example package with C++ extension',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
