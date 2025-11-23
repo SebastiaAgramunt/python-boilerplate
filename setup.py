@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 from pathlib import Path
 import sysconfig
 
-__version__ = '0.0.3'
+__version__ = '0.0.5'
 
 REPO_PATH = Path(__file__).resolve().parent
 
