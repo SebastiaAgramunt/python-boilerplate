@@ -75,11 +75,18 @@ jobs:
       - name: Download wheel artifacts
         uses: actions/download-artifact@v4
         with:
+          pattern: wheels-*
           path: ./artifacts
+          merge-multiple: true
+
+      - name: List downloaded wheels
+        run: |
+          echo "Contents of ./artifacts:"
+          ls -R ./artifacts || echo "No artifacts found"
 
       - name: Create / update GitHub Release and upload wheels
         uses: softprops/action-gh-release@v2
         with:
-          files: artifacts/**/*.whl
+          files: artifacts/*.whl
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
