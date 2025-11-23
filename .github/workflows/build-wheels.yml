@@ -6,6 +6,9 @@ on:
     tags: [ "v*" ] # only build/publish on version tags
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
